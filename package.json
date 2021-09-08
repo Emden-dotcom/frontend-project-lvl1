@@ -7,12 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
+    "type": "module",
     "url": "git@github.com:Emden-dotcom/frontend-project-lvl1.git"
   },
   "keywords": [
     "hexlet"
   ],
   "author": "Alex Kiricenko",
-  "license": "ISC"
+  "license": "ISC",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  }  
 }
