@@ -1,4 +1,4 @@
-setup: install brain-games publish
+setup: install brain-games publish lint
 
 install:
 	npm install
@@ -8,3 +8,6 @@ brain-games:
 
 publish:
 	npm publish --dry-run
+
+lint:
+	npx eslint .
