@@ -5,4 +5,4 @@
 
 <a href="https://codeclimate.com/github/Emden-dotcom/frontend-project-lvl1/test_coverage"><img src="https://api.codeclimate.com/v1/badges/3b486391fe48f18c1afd/test_coverage" /></a>
 
-[![Github Actions](https://github.com/Emden-dotcom/frontend-project-lvl1/workflows/Node%20CI/badge.svg)](https://github.com/Emden-dotcom/frontend-project-lvl1/actions)
+[![Github Actions](https://github.com/Emden-dotcom/frontend-project-lvl1/workflows/Make-lint/badge.svg)](https://github.com/Emden-dotcom/frontend-project-lvl1/actions)
