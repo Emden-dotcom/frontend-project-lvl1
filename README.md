@@ -10,4 +10,6 @@
 [![Github Actions](https://github.com/Emden-dotcom/frontend-project-lvl1/workflows/Github_Actions/badge.svg)](https://github.com/Emden-dotcom/frontend-project-lvl1/actions)
 >>>>>>> e820345c173bfb8bbc5cecf83a631755400792b6
 
-https://asciinema.org/a/5mKylj5tWrDEOjZBKme8u0qHV
+Step 5: https://asciinema.org/a/5mKylj5tWrDEOjZBKme8u0qHV
+Step 6: https://asciinema.org/a/1aG7rYmDn2rBtFHCbiyMjkJl9
+
