@@ -10,9 +10,10 @@
 [![Github Actions](https://github.com/Emden-dotcom/frontend-project-lvl1/workflows/Github_Actions/badge.svg)](https://github.com/Emden-dotcom/frontend-project-lvl1/actions)
 >>>>>>> e820345c173bfb8bbc5cecf83a631755400792b6
 
-Step 5: https://asciinema.org/a/5mKylj5tWrDEOjZBKme8u0qHV
-Step 6: https://asciinema.org/a/1aG7rYmDn2rBtFHCbiyMjkJl9
-Step 7: https://asciinema.org/a/hQ49q1rWmykXMALcSudMJMjF7
-Step 8: https://asciinema.org/a/MbEwQXsdqYCK7qC5xVbu2jgF1
-Step 9  https://asciinema.org/a/cn9cpyuyCnU2eYilu4KMxHWKk
+<a href="https://asciinema.org/a/5mKylj5tWrDEOjZBKme8u0qHV">Asciinema Step 5</a>\
+<a href="https://asciinema.org/a/1aG7rYmDn2rBtFHCbiyMjkJl9">Asciinema Step 6</a>\
+<a href="https://asciinema.org/a/hQ49q1rWmykXMALcSudMJMjF7">Asciinema Step 7</a>\
+<a href="https://asciinema.org/a/MbEwQXsdqYCK7qC5xVbu2jgF1">Asciinema Step 8</a>\
+<a href="https://asciinema.org/a/cn9cpyuyCnU2eYilu4KMxHWKk">Asciinema Step 9</a>
+
 
