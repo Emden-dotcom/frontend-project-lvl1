@@ -16,14 +16,14 @@ const brainEvenGames = () => {
       if (playerAnswer === 'yes') {
         console.log('Correct!');
       } else {
-        console.log(`"no" is wrong answer ;(. Correct answer was "yes".\nLet's try again, ${userName}`);
+        console.log(`"no" is wrong answer ;(. Correct answer was "yes".\nLet's try again, ${userName}!`);
         return;
       }
     } else if (randomNumber % 2 !== 0) {
       if (playerAnswer === 'no') {
         console.log('Correct!');
       } else {
-        console.log(`"yes" is wrong answer ;(. Correct answer was "no".\nLet's try again, ${userName}`);
+        console.log(`"yes" is wrong answer ;(. Correct answer was "no".\nLet's try again, ${userName}!`);
         return;
       }
     } else {

@@ -44,7 +44,7 @@ const brainCalculator = () => {
     if (playerAnswer === operationResult.toString()) {
       console.log('Correct!');
     } else {
-      console.log(`"${playerAnswer}" is wrong answer ;(. Correct answer was "${operationResult}".\nLet's try again, ${userName}`);
+      console.log(`"${playerAnswer}" is wrong answer ;(. Correct answer was "${operationResult}".\nLet's try again, ${userName}!`);
       return;
     }
   }

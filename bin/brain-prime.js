@@ -25,7 +25,7 @@ const brainPrime = () => {
     if (playerAnswer === isPrime.toString()) {
       console.log('Correct!');
     } else {
-      console.log(`"${playerAnswer}" is wrong answer ;(. Correct answer was "${isPrime}".\nLet's try again, ${userName}`);
+      console.log(`"${playerAnswer}" is wrong answer ;(. Correct answer was "${isPrime}".\nLet's try again, ${userName}!`);
       return;
     }
   }

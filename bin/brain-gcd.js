@@ -50,7 +50,7 @@ const brainCalculator = () => {
     if (playerAnswer === commonDivisor.toString()) {
       console.log('Correct!');
     } else {
-      console.log(`"${playerAnswer}" is wrong answer ;(. Correct answer was "${commonDivisor}".\nLet's try again, ${userName}`);
+      console.log(`"${playerAnswer}" is wrong answer ;(. Correct answer was "${commonDivisor}".\nLet's try again, ${userName}!`);
       return;
     }
   }

@@ -38,7 +38,7 @@ const brainProgression = () => {
     if (playerAnswer === excludedValue.toString()) {
       console.log('Correct!');
     } else {
-      console.log(`"${playerAnswer}" is wrong answer ;(. Correct answer was "${excludedValue}".\nLet's try again, ${userName}`);
+      console.log(`"${playerAnswer}" is wrong answer ;(. Correct answer was "${excludedValue}".\nLet's try again, ${userName}!`);
       return;
     }
   }
