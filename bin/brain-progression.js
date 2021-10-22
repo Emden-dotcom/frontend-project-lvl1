@@ -35,7 +35,8 @@ const getArythmeticProgression = () => {
 const brainProgression = () => {
   for (let i = 1; i < 4; i += 1) {
     const array = getArythmeticProgression();
-    console.log('Question:', array[0]);
+    const arrayAsString = array[0].toString();
+    console.log('Question:', arrayAsString);
     const playerAnswer = readlineSync.question('Your answer: ');
     if (playerAnswer === array[1].toString()) {
       console.log('Correct!');
