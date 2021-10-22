@@ -39,7 +39,7 @@ const brainCalculator = () => {
       randomNumber2,
     );
 
-    console.log('Question:', randomNumber1 + generatedRandomOperator + randomNumber2);
+    console.log('Question:', randomNumber1, generatedRandomOperator, randomNumber2);
     const playerAnswer = readlineSync.question('Your answer: ');
     if (playerAnswer === operationResult.toString()) {
       console.log('Correct!');
