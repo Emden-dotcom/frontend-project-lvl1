@@ -30,8 +30,9 @@ const getCommonDivisor = (array1, array2) => {
 
 const brainCalculator = () => {
   for (let i = 1; i < 4; i += 1) {
-    const randomNumber1 = Math.floor(Math.random() * 100);
-    const randomNumber2 = Math.floor(Math.random() * 100);
+    const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min) + min);
+    const randomNumber1 = getRandomNumber(0, 100);
+    const randomNumber2 = getRandomNumber(0, 100);
     const listRandonDividersFirstNumber = getDivisorsList(randomNumber1);
     const listRandonDividersSecondNumber = getDivisorsList(randomNumber2);
     const commonDivisorsList = getCommonDivisor(
@@ -39,12 +40,6 @@ const brainCalculator = () => {
       listRandonDividersSecondNumber,
     );
     const commonDivisor = Math.max(...commonDivisorsList);
-    //  console.log('randomNumber1>>>>>', randomNumber1);
-    //  console.log('randomNumber2>>>>>', randomNumber2);
-    //  console.log('randomDividers1>>>>>', listRandonDividersFirstNumber);
-    //  console.log('randomDividers2>>>>>', listRandonDividersSecondNumber);
-    // console.log('commonDivisor>>>>>', commonDivisorsList);
-    //  console.log('commonDivisor>>>>', commonDivisor);
     console.log('Question:', randomNumber1, randomNumber2);
     const playerAnswer = readlineSync.question('Your answer: ');
     if (playerAnswer === commonDivisor.toString()) {
