@@ -10,22 +10,20 @@ const getRandomOperator = () => {
   const randomPercentage = Math.random();
   if (randomPercentage < 0.33) {
     return '+';
-  } else if (randomPercentage < 0.66) {
+  } if (randomPercentage < 0.66) {
     return '-';
-  } else {
-    return '*';
   }
+  return '*';
 };
 getRandomOperator();
 
 const getRandomNumberOperationResult = (operator, num1, num2) => {
   if (operator === '+') {
     return (num1 + num2);
-  } else if (operator === '-') {
-  return (num1 - num2);
-  } else {
-    return (num1 * num2);
+  } if (operator === '-') {
+    return (num1 - num2);
   }
+  return (num1 * num2);
 };
 
 const brainCalculator = () => {
