@@ -6,39 +6,41 @@ const userName = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${userName}!`);
 console.log('What number is missing in the progression?');
 
-const getArithmeticProgressionArray = () => {
+const getArythmeticProgression = () => {
   const getFirstElement = Math.floor(Math.random() * 10);
   const getProgression = Math.floor(Math.random() * 10);
-  //  console.log('getFirstElement>>>>>', getFirstElement);
-  //  console.log('getProgression>>>>>', getProgression);
-  const getArray = [];
-  let counter;
+  const getExclusion = (min, max) => Math.floor(Math.random() * (max - min) + min);
+  const exclusionIndex = getExclusion(1, 9);
+
+  let result = '';
+  let counter = 0;
+  let getReplacedNumber = 0;
 
   for (let i = 0; i < 10; i += 1) {
     if (i === 0) {
-      getArray[0] = getFirstElement;
-      counter = getFirstElement + getProgression;
+      result = `${result} ${getFirstElement}`;
+      counter = getProgression + getFirstElement;
+    } else if (i === exclusionIndex) {
+      result = `${result} ${'..'}`;
+      getReplacedNumber = counter;
+      counter += getProgression;
     } else {
-      getArray.push(counter);
-      counter = getProgression + counter;
+      result = `${result} ${counter}`;
+      counter += getProgression;
     }
   }
-  return getArray;
+  return [result, getReplacedNumber];
 };
 
 const brainProgression = () => {
   for (let i = 1; i < 4; i += 1) {
-    const finalArray = getArithmeticProgressionArray();
-    const randomArrayValueExclusion = Math.floor(Math.random() * 10);
-    const excludedValue = finalArray[randomArrayValueExclusion];
-    finalArray[randomArrayValueExclusion] = '..';
-
-    console.log('Question:', finalArray);
+    const array = getArythmeticProgression();
+    console.log('Question:', array[0]);
     const playerAnswer = readlineSync.question('Your answer: ');
-    if (playerAnswer === excludedValue.toString()) {
+    if (playerAnswer === array[1].toString()) {
       console.log('Correct!');
     } else {
-      console.log(`"${playerAnswer}" is wrong answer ;(. Correct answer was "${excludedValue}".\nLet's try again, ${userName}!`);
+      console.log(`"${playerAnswer}" is wrong answer ;(. Correct answer was "${array[1]}".\nLet's try again, ${userName}!`);
       return;
     }
   }
