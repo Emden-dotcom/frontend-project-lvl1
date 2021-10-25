@@ -18,10 +18,10 @@ const getDivisorsList = (num) => {
 
 const getCommonDivisor = (array1, array2) => {
   const result = [];
-  for (const item of array1) {
+  for (let y = 0; y < array1.length; y += 1) {
     for (let i = 0; i < array2.length; i += 1) {
-      if (item === array2[i]) {
-        result.push(item);
+      if (array1[y] === array2[i]) {
+        result.push(array1[y]);
       }
     }
   }
