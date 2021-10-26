@@ -6,7 +6,7 @@ const userName = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${userName}!`);
 console.log('Find the greatest common divisor of given numbers.');
 
-const getDivisorsList = (num) => {
+const getDivisors = (num) => {
   const result = [];
   for (let i = 1; i <= num; i += 1) {
     if (num % i === 0) {
@@ -33,11 +33,11 @@ const brainCalculator = () => {
     const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min) + min);
     const randomNumber1 = getRandomNumber(0, 100);
     const randomNumber2 = getRandomNumber(0, 100);
-    const listRandonDividersFirstNumber = getDivisorsList(randomNumber1);
-    const listRandonDividersSecondNumber = getDivisorsList(randomNumber2);
+    const randonDividersFirstNumber = getDivisors(randomNumber1);
+    const randonDividersSecondNumber = getDivisors(randomNumber2);
     const commonDivisorsList = getCommonDivisor(
-      listRandonDividersFirstNumber,
-      listRandonDividersSecondNumber,
+      randonDividersFirstNumber,
+      randonDividersSecondNumber,
     );
     const commonDivisor = Math.max(...commonDivisorsList);
     console.log('Question:', randomNumber1, randomNumber2);
