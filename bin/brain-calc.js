@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import { greeting } from '../src/index.js';
+import { randomNumber } from '../src/random_number.js';
 
 
 
@@ -31,6 +32,8 @@ const getRandomNumberOperationResult = (operator, num1, num2) => {
   }
   return (num1 * num2);
 };
+
+
 
 export const brainCalculator = () => {
   for (let i = 1; i < 4; i += 1) {
