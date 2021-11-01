@@ -1,9 +1,15 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import { greeting } from '../src/index.js';
 
+
+
+console.log(greeting);
+/*
 console.log('Welcome to the Brain Games!');
 const userName = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${userName}!`);
+*/
 console.log('What is the result of the expression?');
 
 const getRandomOperator = () => {
@@ -26,7 +32,7 @@ const getRandomNumberOperationResult = (operator, num1, num2) => {
   return (num1 * num2);
 };
 
-const brainCalculator = () => {
+export const brainCalculator = () => {
   for (let i = 1; i < 4; i += 1) {
     const generatedRandomOperator = getRandomOperator();
     const randomNumber1 = Math.floor(Math.random() * 10);
@@ -37,6 +43,14 @@ const brainCalculator = () => {
       randomNumber2,
     );
 
+const questionForPlayer = `${randomNumber1} ${generatedRandomOperator} ${randomNumber2}`;
+const arrayWithQuestionAndAnswer = [questionForPlayer, operationResult];
+  }
+  return arrayWithQuestionAndAnswer;
+
+  };
+
+/*
     console.log('Question:', randomNumber1, generatedRandomOperator, randomNumber2);
     const playerAnswer = readlineSync.question('Your answer: ');
     if (playerAnswer === operationResult.toString()) {
@@ -47,6 +61,8 @@ const brainCalculator = () => {
     }
   }
   console.log(`Congratulations, ${userName}!`);
-};
 
-brainCalculator();
+*/
+
+
+//brainCalculator();
