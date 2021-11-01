@@ -1,16 +1,7 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
-import { greeting } from '../src/index.js';
-import { randomNumber } from '../src/utils.js';
-
-
+import { randomNumber, greeting } from '../src/utils.js';
 
 console.log(greeting());
-/*
-console.log('Welcome to the Brain Games!');
-const userName = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${userName}!`);
-*/
 console.log('What is the result of the expression?');
 
 const getRandomOperator = () => {
