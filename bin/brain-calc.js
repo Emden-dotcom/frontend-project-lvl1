@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import { greeting } from '../src/index.js';
-import { randomNumber } from '../src/random_number.js';
+import { randomNumber } from '../src/utils.js';
 
 
 
-console.log(greeting);
+console.log(greeting());
 /*
 console.log('Welcome to the Brain Games!');
 const userName = readlineSync.question('May I have your name? ');
@@ -38,8 +38,8 @@ const getRandomNumberOperationResult = (operator, num1, num2) => {
 export const brainCalculator = () => {
   for (let i = 1; i < 4; i += 1) {
     const generatedRandomOperator = getRandomOperator();
-    const randomNumber1 = Math.floor(Math.random() * 10);
-    const randomNumber2 = Math.floor(Math.random() * 10);
+    const randomNumber1 = randomNumber;
+    const randomNumber2 = randomNumber;
     const operationResult = getRandomNumberOperationResult(
       generatedRandomOperator,
       randomNumber1,
@@ -47,9 +47,8 @@ export const brainCalculator = () => {
     );
 
 const questionForPlayer = `${randomNumber1} ${generatedRandomOperator} ${randomNumber2}`;
-const arrayWithQuestionAndAnswer = [questionForPlayer, operationResult];
   }
-  return arrayWithQuestionAndAnswer;
+  return [questionForPlayer, operationResult];
 
   };
 

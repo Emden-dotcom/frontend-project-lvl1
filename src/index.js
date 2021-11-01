@@ -1,5 +1,4 @@
-// import readlineSync from 'readline-sync';
-
+import readlineSync from 'readline-sync';
 import { brainCalculator } from '../bin/brain-calc.js';
 
 
