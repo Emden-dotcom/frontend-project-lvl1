@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 
 import { getRandomNumber, roundsCount } from '../utils.js';
 
-export const taskDescription = 'What is the result of the expression?';
+const taskDescription = 'What is the result of the expression?';
 
 const getRandomOperator = () => {
   const randomPercentage = Math.random();
@@ -41,7 +41,7 @@ const brainCalculator = () => {
   return result;
 };
 
-export const theGame = () => {
+const theGame = () => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
@@ -61,3 +61,5 @@ export const theGame = () => {
   }
 };
 theGame(brainCalculator);
+
+export default theGame();
