@@ -1,9 +1,9 @@
 // #!/usr/bin/env node
-import readlineSync from 'readline-sync';
 
-import { getRandomNumber, roundsCount } from '../utils.js';
+import { getRandomNumber } from '../utils.js';
+import engine, { roundsCount } from '../index.js';
 
-const taskDescription = 'What is the result of the expression?';
+const gameDescription = 'What is the result of the expression?';
 
 const getRandomOperator = () => {
   const randomPercentage = Math.random();
@@ -24,7 +24,7 @@ const getRandomNumberOperationResult = (operator, num1, num2) => {
   return (num1 * num2);
 };
 
-const brainCalculator = () => {
+export const brainCalculator = () => {
   const result = [];
   for (let i = 0; i < roundsCount; i += 1) {
     const generatedRandomOperator = getRandomOperator();
@@ -41,25 +41,7 @@ const brainCalculator = () => {
   return result;
 };
 
-const theGame = () => {
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-  console.log(taskDescription);
-  const array = brainCalculator();
-  for (let i = 0; i < roundsCount; i += 1) {
-    const [questionForPlayer, operationResult] = array[i];
-    console.log('Question:', questionForPlayer);
-    const playerAnswer = readlineSync.question('Your answer: ');
-    if (playerAnswer === operationResult.toString()) {
-      console.log('Correct!');
-    } else {
-      console.log(`"${playerAnswer}" is wrong answer ;(. Correct answer was "${operationResult}".\nLet's try again, ${userName}!`);
-      return;
-    }
-    console.log(`Congratulations, ${userName}!`);
-  }
+export default () => {
+  const rounds = brainCalculator();
+  engine(rounds, gameDescription);
 };
-theGame(brainCalculator);
-
-export default theGame();
