@@ -39,7 +39,7 @@ const nodArrayGenerator = () => {
       randonDividersSecondNumber,
     );
     const commonDivisor = Math.max(...commonDivisorsList);
-    result.push([[randomNumber1, randomNumber2], commonDivisor]);
+    result.push([`${randomNumber1} ${randomNumber2}`, commonDivisor]);
   }
   return result;
 };
