@@ -17,7 +17,7 @@ const getArythmeticProgression = () => {
 
   for (let i = 0; i < 10; i += 1) {
     if (i === 0) {
-      result = `${result} ${getFirstElement}`;
+      result = `${getFirstElement}`;
       counter = getProgression + getFirstElement;
     } else if (i === exclusionIndex) {
       result = `${result} ${'..'}`;
