@@ -1,7 +1,7 @@
-### frontend-project-lvl1:
+# frontend-project-lvl1:
 
 [![Actions Status](https://github.com/Emden-dotcom/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Emden-dotcom/frontend-project-lvl1/actions)
-_________________________________________________________-
+
 
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 
@@ -19,4 +19,14 @@ _________________________________________________________-
 <a href="https://asciinema.org/a/MbEwQXsdqYCK7qC5xVbu2jgF1">Asciinema Step 8</a>\
 <a href="https://asciinema.org/a/cn9cpyuyCnU2eYilu4KMxHWKk">Asciinema Step 9</a>
 
+Это тест цитаты
+> Тут может находиться Ваша реклама
+Конец теста цитаты текста
 
+Это тест цитаты кода
+```
+code
+code 
+code
+```
+Конец теста цитаты кода
