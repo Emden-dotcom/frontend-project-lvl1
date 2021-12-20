@@ -1,7 +1,7 @@
 // #!/usr/bin/env node
 
 import { getRandomNumber } from '../utils.js';
-import engine, { roundsCount } from '../index.js';
+import runTheGame, { roundsCount } from '../index.js';
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -14,7 +14,7 @@ const checkPrimeNumber = (num) => {
   return 'yes';
 };
 
-const brainPrime = () => {
+const getBrainPrimeArray = () => {
   const result = [];
   for (let i = 0; i < roundsCount; i += 1) {
     const randomNumber = getRandomNumber(2, 1000);
@@ -25,6 +25,6 @@ const brainPrime = () => {
 };
 
 export default () => {
-  const rounds = brainPrime();
-  engine(rounds, gameDescription);
+  const rounds = getBrainPrimeArray();
+  runTheGame(rounds, gameDescription);
 };

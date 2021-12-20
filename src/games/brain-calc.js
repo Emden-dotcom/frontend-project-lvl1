@@ -1,7 +1,7 @@
 // #!/usr/bin/env node
 
 import { getRandomNumber } from '../utils.js';
-import engine, { roundsCount } from '../index.js';
+import runTheGame, { roundsCount } from '../index.js';
 
 const gameDescription = 'What is the result of the expression?';
 
@@ -24,7 +24,7 @@ const getRandomNumberOperationResult = (operator, num1, num2) => {
   return (num1 * num2);
 };
 
-export const brainCalculator = () => {
+export const getBrainCalculatorArray = () => {
   const result = [];
   for (let i = 0; i < roundsCount; i += 1) {
     const generatedRandomOperator = getRandomOperator();
@@ -42,6 +42,6 @@ export const brainCalculator = () => {
 };
 
 export default () => {
-  const rounds = brainCalculator();
-  engine(rounds, gameDescription);
+  const rounds = getBrainCalculatorArray();
+  runTheGame(rounds, gameDescription);
 };

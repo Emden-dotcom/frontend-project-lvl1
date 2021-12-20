@@ -1,7 +1,7 @@
 // #!/usr/bin/env node
 
 import { getRandomNumber } from '../utils.js';
-import engine, { roundsCount } from '../index.js';
+import runTheGame, { roundsCount } from '../index.js';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
@@ -27,7 +27,7 @@ const getCommonDivisor = (array1, array2) => {
   return result;
 };
 
-const nodArrayGenerator = () => {
+const getNodArray = () => {
   const result = [];
   for (let i = 0; i < roundsCount; i += 1) {
     const randomNumber1 = getRandomNumber(1, 100);
@@ -45,6 +45,6 @@ const nodArrayGenerator = () => {
 };
 
 export default () => {
-  const rounds = nodArrayGenerator();
-  engine(rounds, gameDescription);
+  const rounds = getNodArray();
+  runTheGame(rounds, gameDescription);
 };

@@ -1,37 +1,37 @@
 // #!/usr/bin/env node
 
 import { getRandomNumber } from '../utils.js';
-import engine, { roundsCount } from '../index.js';
+import runTheGame, { roundsCount } from '../index.js';
 
 const gameDescription = 'What number is missing in the progression?';
+const progressionLength = 10;
 
 const getArythmeticProgression = () => {
-  const getFirstElement = getRandomNumber(0, 100);
-  const getProgression = getRandomNumber(1, 10);
-  const getExclusion = (min, max) => Math.floor(Math.random() * (max - min) + min);
-  const exclusionIndex = getExclusion(1, 9);
+  const firstElement = getRandomNumber(0, 100);
+  const progression = getRandomNumber(1, 10);
+  const exclusionIndex = getRandomNumber(1, 9);
 
   let result = '';
   let counter = 0;
   let getReplacedNumber = 0;
 
-  for (let i = 0; i < 10; i += 1) {
+  for (let i = 0; i < progressionLength; i += 1) {
     if (i === 0) {
-      result = `${getFirstElement}`;
-      counter = getProgression + getFirstElement;
+      result = `${firstElement}`;
+      counter = progression + firstElement;
     } else if (i === exclusionIndex) {
       result = `${result} ${'..'}`;
       getReplacedNumber = counter;
-      counter += getProgression;
+      counter += progression;
     } else {
       result = `${result} ${counter}`;
-      counter += getProgression;
+      counter += progression;
     }
   }
   return [result, getReplacedNumber];
 };
 
-const brainProgression = () => {
+const getBrainProgressionArray = () => {
   const result = [];
   for (let i = 0; i < roundsCount; i += 1) {
     result.push(getArythmeticProgression());
@@ -40,6 +40,6 @@ const brainProgression = () => {
 };
 
 export default () => {
-  const rounds = brainProgression();
-  engine(rounds, gameDescription);
+  const rounds = getBrainProgressionArray();
+  runTheGame(rounds, gameDescription);
 };
