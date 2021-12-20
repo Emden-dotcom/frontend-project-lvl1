@@ -27,36 +27,22 @@ $ node brain-even
 [![asciicast](https://asciinema.org/a/457466.svg)](https://asciinema.org/a/457466)
 
 
-
-
-
-
-
-
-
-
-
-
-<a href="https://asciinema.org/a/5mKylj5tWrDEOjZBKme8u0qHV">Asciinema Step 5</a>\
-<a href="https://asciinema.org/a/1aG7rYmDn2rBtFHCbiyMjkJl9">Asciinema Step 6</a>\
-<a href="https://asciinema.org/a/hQ49q1rWmykXMALcSudMJMjF7">Asciinema Step 7</a>\
-<a href="https://asciinema.org/a/MbEwQXsdqYCK7qC5xVbu2jgF1">Asciinema Step 8</a>\
-<a href="https://asciinema.org/a/cn9cpyuyCnU2eYilu4KMxHWKk">Asciinema Step 9</a>
-
-Это тест цитаты
-> Тут может находиться Ваша реклама
-
-Конец теста цитаты текста
-
-Это тест цитаты кода
+# start "Brain Get Greatest Common Divisor" game
 ```
-code
-code 
-code
+$ node brain-gcd
 ```
-Конец теста цитаты кода
+[![asciicast](https://asciinema.org/a/457468.svg)](https://asciinema.org/a/457468)
 
 
-Цитата `слова`, вложенная в текстовое сообщение.
+ # start "Brain Prime" game
+ ```
+$ node brain-prime
+```
+[![asciicast](https://asciinema.org/a/457470.svg)](https://asciinema.org/a/457470)
 
-Тут может быть ссылка на Ваш [сайт](https://www.seznam.cz/).
+
+ # start "Brain Progression" game
+ ```
+$ node brain-progression
+```
+[![asciicast](https://asciinema.org/a/457471.svg)](https://asciinema.org/a/457471)
