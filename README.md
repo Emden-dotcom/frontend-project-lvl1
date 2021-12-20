@@ -15,9 +15,23 @@ $ git clone https://github.com/Emden-dotcom/frontend-project-lvl1
 
 # start "Brain Calc" game
 ```
-$ brain-calc
+$ node brain-calc
 ```
 [![asciicast](https://asciinema.org/a/457462.svg)](https://asciinema.org/a/457462)
+
+
+# start "Brain Even" game
+```
+$ node brain-even
+```
+[![asciicast](https://asciinema.org/a/457466.svg)](https://asciinema.org/a/457466)
+
+
+
+
+
+
+
 
 
 
