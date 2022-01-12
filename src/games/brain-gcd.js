@@ -27,7 +27,7 @@ const getCommonDivisor = (array1, array2) => {
   return result;
 };
 
-const getNodArray = () => {
+const getNod = () => {
   const result = [];
   for (let i = 0; i < roundsCount; i += 1) {
     const randomNumber1 = getRandomNumber(1, 100);
@@ -45,6 +45,6 @@ const getNodArray = () => {
 };
 
 export default () => {
-  const rounds = getNodArray();
+  const rounds = getNod();
   runTheGame(rounds, gameDescription);
 };

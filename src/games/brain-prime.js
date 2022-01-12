@@ -14,7 +14,7 @@ const checkPrimeNumber = (num) => {
   return 'yes';
 };
 
-const getBrainPrimeArray = () => {
+const getBrainPrime = () => {
   const result = [];
   for (let i = 0; i < roundsCount; i += 1) {
     const randomNumber = getRandomNumber(2, 1000);
@@ -25,6 +25,6 @@ const getBrainPrimeArray = () => {
 };
 
 export default () => {
-  const rounds = getBrainPrimeArray();
+  const rounds = getBrainPrime();
   runTheGame(rounds, gameDescription);
 };

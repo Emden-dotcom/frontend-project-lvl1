@@ -6,25 +6,23 @@ import runTheGame, { roundsCount } from '../index.js';
 const gameDescription = 'What is the result of the expression?';
 
 const getRandomOperator = () => {
-  const randomPercentage = Math.random();
-  if (randomPercentage < 0.33) {
-    return '+';
-  } if (randomPercentage < 0.66) {
-    return '-';
-  }
-  return '*';
+  const operatorsList = ['+', '-', '*'];
+  const getRandomOeratorIndex = getRandomNumber(0, 2);
+  return operatorsList[getRandomOeratorIndex];
 };
 
 const getRandomNumberOperationResult = (operator, num1, num2) => {
-  if (operator === '+') {
-    return (num1 + num2);
-  } if (operator === '-') {
-    return (num1 - num2);
+  switch (operator) {
+    case '+':
+      return (num1 + num2);
+    case '-':
+      return (num1 - num2);
+    default:
+      return (num1 * num2);
   }
-  return (num1 * num2);
 };
 
-export const getBrainCalculatorArray = () => {
+export const getBrainCalculator = () => {
   const result = [];
   for (let i = 0; i < roundsCount; i += 1) {
     const generatedRandomOperator = getRandomOperator();
@@ -35,13 +33,13 @@ export const getBrainCalculatorArray = () => {
       randomNumber1,
       randomNumber2,
     );
-    const questionForPlayer = `${randomNumber1} ${generatedRandomOperator} ${randomNumber2}`;
-    result.push([questionForPlayer, operationResult]);
+    const question = `${randomNumber1} ${generatedRandomOperator} ${randomNumber2}`;
+    result.push([question, operationResult]);
   }
   return result;
 };
 
 export default () => {
-  const rounds = getBrainCalculatorArray();
+  const rounds = getBrainCalculator();
   runTheGame(rounds, gameDescription);
 };

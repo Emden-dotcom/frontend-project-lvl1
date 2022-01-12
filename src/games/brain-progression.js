@@ -31,7 +31,7 @@ const getArythmeticProgression = () => {
   return [result, getReplacedNumber];
 };
 
-const getBrainProgressionArray = () => {
+const getBrainProgression = () => {
   const result = [];
   for (let i = 0; i < roundsCount; i += 1) {
     result.push(getArythmeticProgression());
@@ -40,6 +40,6 @@ const getBrainProgressionArray = () => {
 };
 
 export default () => {
-  const rounds = getBrainProgressionArray();
+  const rounds = getBrainProgression();
   runTheGame(rounds, gameDescription);
 };

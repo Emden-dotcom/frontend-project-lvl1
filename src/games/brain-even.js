@@ -5,7 +5,7 @@ import runTheGame, { roundsCount } from '../index.js';
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const getBrainEvenGamesArray = () => {
+const getBrainEvenGames = () => {
   const result = [];
   for (let i = 0; i < roundsCount; i += 1) {
     const randomNumber = getRandomNumber(0, 100);
@@ -19,6 +19,6 @@ const getBrainEvenGamesArray = () => {
 };
 
 export default () => {
-  const rounds = getBrainEvenGamesArray();
+  const rounds = getBrainEvenGames();
   runTheGame(rounds, gameDescription);
 };
