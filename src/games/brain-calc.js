@@ -11,7 +11,7 @@ const getRandomOperator = () => {
   return operatorsList[getRandomOeratorIndex];
 };
 
-const getRandomNumberOperationResult = (operator, num1, num2) => {
+const getRandomOperationResult = (operator, num1, num2) => {
   switch (operator) {
     case '+':
       return (num1 + num2);
@@ -22,24 +22,25 @@ const getRandomNumberOperationResult = (operator, num1, num2) => {
   }
 };
 
-export const getBrainCalculator = () => {
+const generateRound = () => {
   const result = [];
-  for (let i = 0; i < roundsCount; i += 1) {
-    const generatedRandomOperator = getRandomOperator();
-    const randomNumber1 = getRandomNumber(0, 10);
-    const randomNumber2 = getRandomNumber(0, 10);
-    const operationResult = getRandomNumberOperationResult(
-      generatedRandomOperator,
-      randomNumber1,
-      randomNumber2,
-    );
-    const question = `${randomNumber1} ${generatedRandomOperator} ${randomNumber2}`;
-    result.push([question, operationResult]);
-  }
+  const generatedRandomOperator = getRandomOperator();
+  const randomNumber1 = getRandomNumber(0, 10);
+  const randomNumber2 = getRandomNumber(0, 10);
+  const answer = getRandomOperationResult(
+    generatedRandomOperator,
+    randomNumber1,
+    randomNumber2,
+  );
+  const question = `${randomNumber1} ${generatedRandomOperator} ${randomNumber2}`;
+  result.push(question, answer);
   return result;
 };
 
 export default () => {
-  const rounds = getBrainCalculator();
+  const rounds = [];
+  for (let i = 0; i < roundsCount; i += 1) {
+    rounds.push(generateRound());
+  }
   runTheGame(rounds, gameDescription);
 };
