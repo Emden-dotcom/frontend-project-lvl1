@@ -5,20 +5,12 @@ import runTheGame, { roundsCount } from '../index.js';
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const getBrainEvenGames = () => {
-  const result = [];
+export default () => {
+  const rounds = [];
   for (let i = 0; i < roundsCount; i += 1) {
     const randomNumber = getRandomNumber(0, 100);
-    if (randomNumber % 2 === 0) {
-      result.push([randomNumber, 'yes']);
-    } else if (randomNumber % 2 !== 0) {
-      result.push([randomNumber, 'no']);
-    }
+    const getEvenGameAnswer = (randomNumber % 2 === 0) ? 'yes' : 'no';
+    rounds.push([randomNumber, getEvenGameAnswer]);
   }
-  return result;
-};
-
-export default () => {
-  const rounds = getBrainEvenGames();
   runTheGame(rounds, gameDescription);
 };

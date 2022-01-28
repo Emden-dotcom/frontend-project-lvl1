@@ -27,6 +27,15 @@ const getCommonDivisor = (array1, array2) => {
   return result;
 };
 
+/*
+const getGcd = (num1, num2) => {
+  if (num1 === 0) {
+    return num2;
+  }
+  return (num2 % num1, num1);
+};
+*/
+
 const getNod = () => {
   const result = [];
   for (let i = 0; i < roundsCount; i += 1) {

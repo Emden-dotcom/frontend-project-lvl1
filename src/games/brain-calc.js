@@ -17,13 +17,14 @@ const getRandomOperationResult = (operator, num1, num2) => {
       return (num1 + num2);
     case '-':
       return (num1 - num2);
-    default:
+    case '*':
       return (num1 * num2);
+    default:
+      throw new Error('Unsupported operator');
   }
 };
 
 const generateRound = () => {
-  const result = [];
   const generatedRandomOperator = getRandomOperator();
   const randomNumber1 = getRandomNumber(0, 10);
   const randomNumber2 = getRandomNumber(0, 10);
@@ -33,8 +34,7 @@ const generateRound = () => {
     randomNumber2,
   );
   const question = `${randomNumber1} ${generatedRandomOperator} ${randomNumber2}`;
-  result.push(question, answer);
-  return result;
+  return [question, answer];
 };
 
 export default () => {

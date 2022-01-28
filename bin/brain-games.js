@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import getUserName from '../src/cli.js';
+import playerGreeting from '../src/cli.js';
 
-getUserName();
+playerGreeting();
