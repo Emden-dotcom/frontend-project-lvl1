@@ -4,9 +4,9 @@ import { getRandomNumber } from '../utils.js';
 import runTheGame, { roundsCount } from '../index.js';
 
 const gameDescription = 'What is the result of the expression?';
+const operatorsList = ['+', '-', '*'];
 
 const getRandomOperator = () => {
-  const operatorsList = ['+', '-', '*'];
   const getRandomOeratorIndex = getRandomNumber(0, 2);
   return operatorsList[getRandomOeratorIndex];
 };
@@ -14,11 +14,11 @@ const getRandomOperator = () => {
 const getRandomOperationResult = (operator, num1, num2) => {
   switch (operator) {
     case '+':
-      return (num1 + num2);
+      return num1 + num2;
     case '-':
-      return (num1 - num2);
+      return num1 - num2;
     case '*':
-      return (num1 * num2);
+      return num1 * num2;
     default:
       throw new Error('Unsupported operator');
   }
@@ -32,7 +32,7 @@ const generateRound = () => {
     generatedRandomOperator,
     randomNumber1,
     randomNumber2,
-  );
+  ).toString();
   const question = `${randomNumber1} ${generatedRandomOperator} ${randomNumber2}`;
   return [question, answer];
 };

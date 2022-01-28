@@ -8,23 +8,23 @@ const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer
 const checkPrimeNumber = (num) => {
   for (let i = 2; i < num; i += 1) {
     if (num % i === 0) {
-      return 'no';
+      return false;
     }
   }
-  return 'yes';
+  return true;
 };
 
-const getBrainPrime = () => {
-  const result = [];
-  for (let i = 0; i < roundsCount; i += 1) {
-    const randomNumber = getRandomNumber(2, 1000);
-    const isPrime = checkPrimeNumber(randomNumber);
-    result.push([randomNumber, isPrime]);
-  }
-  return result;
+const generateRound = () => {
+  const question = getRandomNumber(2, 1000);
+  const answer = checkPrimeNumber(question) ? 'yes' : 'no';
+  return [question, answer];
 };
 
 export default () => {
-  const rounds = getBrainPrime();
+  const rounds = [];
+
+  for (let i = 0; i < roundsCount; i += 1) {
+    rounds.push(generateRound());
+  }
   runTheGame(rounds, gameDescription);
 };

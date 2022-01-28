@@ -5,55 +5,27 @@ import runTheGame, { roundsCount } from '../index.js';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
-const getDivisors = (num) => {
-  const result = [];
-  for (let i = 1; i <= num; i += 1) {
-    if (num % i === 0) {
-      result.push(i);
-    }
-  }
-  return result;
-};
-
-const getCommonDivisor = (array1, array2) => {
-  const result = [];
-  for (let y = 0; y < array1.length; y += 1) {
-    for (let i = 0; i < array2.length; i += 1) {
-      if (array1[y] === array2[i]) {
-        result.push(array1[y]);
-      }
-    }
-  }
-  return result;
-};
-
-/*
 const getGcd = (num1, num2) => {
   if (num1 === 0) {
     return num2;
   }
-  return (num2 % num1, num1);
+  return getGcd(num2 % num1, num1);
 };
-*/
 
-const getNod = () => {
-  const result = [];
-  for (let i = 0; i < roundsCount; i += 1) {
-    const randomNumber1 = getRandomNumber(1, 100);
-    const randomNumber2 = getRandomNumber(1, 100);
-    const randonDividersFirstNumber = getDivisors(randomNumber1);
-    const randonDividersSecondNumber = getDivisors(randomNumber2);
-    const commonDivisorsList = getCommonDivisor(
-      randonDividersFirstNumber,
-      randonDividersSecondNumber,
-    );
-    const commonDivisor = Math.max(...commonDivisorsList);
-    result.push([`${randomNumber1} ${randomNumber2}`, commonDivisor]);
-  }
-  return result;
+const generateRound = () => {
+  const randomNumber1 = getRandomNumber(1, 100);
+  const randomNumber2 = getRandomNumber(1, 100);
+  const question = `${randomNumber1} ${randomNumber2}`;
+  const answer = getGcd(randomNumber1, randomNumber2);
+  return [question, answer];
 };
 
 export default () => {
-  const rounds = getNod();
+  const rounds = [];
+
+  for (let i = 0; i < roundsCount; i += 1) {
+    rounds.push(generateRound());
+  }
+
   runTheGame(rounds, gameDescription);
 };
